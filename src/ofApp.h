@@ -16,17 +16,18 @@ class ofApp : public ofBaseApp{
 		void keyPressed(int key);
 		void mouseMoved(int x, int y);
 
-
 		//These chords are ordered in terms of descending brightness
 		//Brightest -> Lydian
 		//Darkest -> Locrian
-		float c_lydian();
-		float c_ionian();
-		float c_mixolydian();
-		float c_dorian();
-		float c_aeolian();
-		float c_phrygian();
-		float c_locrian();
+		float playCLydian();
+		float playCIonian();
+		float playCMixolydian();
+		float playCDorian();
+		float playCAeolian();
+		float playCPhrygian();
+		float playCLocrian();
+
+		void determineChord();
 
 		//OpenCV
 		void getImageInfo();
@@ -72,5 +73,6 @@ class ofApp : public ofBaseApp{
 		float phase;
 		float amplitude;
 		int sampleRate;
+		int c;
 };
 #endif
